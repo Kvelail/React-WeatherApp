@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import days from '../static';
+import DAYS from '../static';
 
 const NextFiveDays = ({ dets }) => {
 
@@ -31,7 +31,7 @@ const NextFiveDays = ({ dets }) => {
                 { fiveDaysDets && fiveDaysDets.map((day, index) => {
 
                     return <div className="next-five-days__box" key={ index }>
-                                <h3 className="next-five-days__day">{ days[new Date(day.Date).getDay()] }</h3>
+                                <h3 className="next-five-days__day">{ DAYS[new Date(day.Date).getDay()] }</h3>
                                 <img className="next-five-days__icon" src={ `icons/${day.Day.Icon}.svg`} alt="icon" />
                                 <h3 className="next-five-days__max">{ day.Temperature.Maximum.Value }&deg;C</h3>
                                 <h3 className="next-five-days__min">{ day.Temperature.Minimum.Value}&deg;C</h3>
